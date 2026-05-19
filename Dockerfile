@@ -2,11 +2,11 @@ FROM node:18-slim
 
 WORKDIR /app
 
-COPY package*.json ./
-COPY app.js ./
+COPY package.json .
+COPY app.js .
 
-RUN npm ci --only=production
+RUN npm install
 
 EXPOSE 8080
 
-CMD ["npm", "start"]
+CMD ["node", "app.js"]
