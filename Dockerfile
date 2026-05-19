@@ -1,12 +1,12 @@
-{
-  "name": "tjsp-monitor",
-  "version": "1.0.0",
-  "main": "app.js",
-  "scripts": {
-    "start": "node app.js"
-  },
-  "dependencies": {
-    "express": "^4.18.2",
-    "axios": "^1.7.0"
-  }
-}
+FROM node:18-slim
+
+WORKDIR /app
+
+COPY package.json .
+COPY app.js .
+
+RUN npm install
+
+EXPOSE 8080
+
+CMD ["node", "app.js"]
