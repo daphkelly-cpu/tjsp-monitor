@@ -1,0 +1,16 @@
+{
+  "name": "tjsp-monitor-cloud-run",
+  "version": "1.0.0",
+  "description": "Monitor de Distribuições Processuais do TJSP - Cloud Run",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "axios": "^1.7.0"
+  },
+  "engines": {
+    "node": "18"
+  }
+}
